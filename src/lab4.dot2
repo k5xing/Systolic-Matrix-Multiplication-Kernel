@@ -1,0 +1,481 @@
+digraph lab4 {
+	graph [bb="0,0,1558,1058",
+		rankdir=LR,
+		size="10,3"
+	];
+	node [label="\N"];
+	edge [minlen=4,
+		penwidth=2.5
+	];
+	{
+		node [fillcolor="#8aaef4",
+			fontsize=21,
+			height=1.5,
+			orientation=0,
+			penwidth=2.5,
+			peripheries=0,
+			pos="0,-150!",
+			shape=diain,
+			style=filled,
+			width=1.5
+		];
+		A0	[pos="54,854"];
+	}
+	{
+		node [fillcolor="#8aaef4",
+			fontsize=21,
+			height=1.5,
+			orientation=0,
+			penwidth=2.5,
+			peripheries=0,
+			pos="300,0!",
+			shape=diaintop,
+			style=filled,
+			width=1.5
+		];
+		B0	[pos="354,1004"];
+	}
+	{
+		node [fillcolor="#8aaef4",
+			fontsize=21,
+			height=1.5,
+			orientation=0,
+			penwidth=2.5,
+			peripheries=0,
+			pos="600,0!",
+			shape=diaintop,
+			style=filled,
+			width=1.5
+		];
+		B1	[pos="654,1004"];
+	}
+	{
+		node [fillcolor="#8aaef4",
+			fontsize=21,
+			height=1.5,
+			orientation=0,
+			penwidth=2.5,
+			peripheries=0,
+			pos="900,0!",
+			shape=diaintop,
+			style=filled,
+			width=1.5
+		];
+		B2	[pos="954,1004"];
+	}
+	{
+		node [fillcolor="#8aaef4",
+			fontsize=21,
+			height=1.5,
+			orientation=0,
+			penwidth=2.5,
+			peripheries=0,
+			pos="1200,0!",
+			shape=diaintop,
+			style=filled,
+			width=1.5
+		];
+		B3	[pos="1254,1004"];
+	}
+	{
+		node [fillcolor="#8aaef4",
+			fontsize=21,
+			height=1.5,
+			penwidth=2.5,
+			peripheries=0,
+			pos="1450,-950!",
+			shape=diaout,
+			style=filled,
+			width=1.5
+		];
+		D0	[pos="1504,54"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=31,
+			height=1.5,
+			label="*",
+			pos="200,-450!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		m00	[pos="254,554"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="+",
+			pos="200,-600!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		s00	[pos="254,404"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="200,-800!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		sum0	[pos="254,204"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="150,-150!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		a00	[pos="204,854"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="300,-300!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		b00	[pos="354,704"];
+	}
+	{
+		node [fillcolor="#d0f4b3",
+			fontsize=21,
+			height=1.5,
+			label="",
+			orientation=-90,
+			penwidth=2.5,
+			pos="300,-950",
+			shape=trapezium,
+			style=filled,
+			width=1
+		];
+		mux0	[pos="354,54"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="*",
+			pos="500,-450!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		m01	[pos="554,554"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="+",
+			pos="500,-600!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		s01	[pos="554,404"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="500,-800!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		sum1	[pos="554,204"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="450,-150!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		a01	[pos="504,854"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="600,-300!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		b10	[pos="654,704"];
+	}
+	{
+		node [fillcolor="#d0f4b3",
+			fontsize=21,
+			height=1.5,
+			label="",
+			orientation=-90,
+			penwidth=2.5,
+			pos="600,-950",
+			shape=trapezium,
+			style=filled,
+			width=1
+		];
+		mux1	[pos="654,54"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="*",
+			pos="800,-450!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		m02	[pos="854,554"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="+",
+			pos="800,-600!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		s02	[pos="854,404"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="800,-800!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		sum2	[pos="854,204"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="750,-150!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		a02	[pos="804,854"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="900,-300!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		b20	[pos="954,704"];
+	}
+	{
+		node [fillcolor="#d0f4b3",
+			fontsize=21,
+			height=1.5,
+			label="",
+			orientation=-90,
+			penwidth=2.5,
+			pos="900,-950",
+			shape=trapezium,
+			style=filled,
+			width=1
+		];
+		mux2	[pos="954,54"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="*",
+			pos="1100,-450!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		m03	[pos="1154,554"];
+	}
+	{
+		node [fillcolor="#f9bbb9",
+			fixedsize=true,
+			fontsize=35,
+			height=1.5,
+			label="+",
+			pos="1100,-600!",
+			shape=ellipse,
+			style=filled,
+			width=1.5
+		];
+		s03	[pos="1154,404"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="1100,-800!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		sum3	[pos="1154,204"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="1050,-150!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		a03	[pos="1104,854"];
+	}
+	{
+		node [fillcolor="#cccccc",
+			fontsize=21,
+			height=1.5,
+			pos="1200,-300!",
+			shape=dff,
+			style=filled,
+			width=1
+		];
+		b30	[pos="1254,704"];
+	}
+	{
+		node [fillcolor="#d0f4b3",
+			fontsize=21,
+			height=1.5,
+			label="",
+			orientation=-90,
+			penwidth=2.5,
+			pos="1200,-950",
+			shape=trapezium,
+			style=filled,
+			width=1
+		];
+		mux3	[pos="1254,54"];
+	}
+	{
+		graph [rank=same,
+			rankdir=LR
+		];
+		B0;
+		B1;
+		B0 -> B1	[pos="e,599.82,1004 408.33,1004 459.33,1004 535.65,1004 589.67,1004",
+			style=invis];
+		B2;
+		B1 -> B2	[pos="e,899.82,1004 708.33,1004 759.33,1004 835.65,1004 889.67,1004",
+			style=invis];
+		B3;
+		B2 -> B3	[pos="e,1199.8,1004 1008.3,1004 1059.3,1004 1135.6,1004 1189.7,1004",
+			style=invis];
+	}
+	subgraph cluster_00 {
+		graph [color=black,
+			fontsize=21,
+			label="PE[0][0]"
+		];
+		m00;
+		s00;
+		m00 -> s00	[pos="e,254,458.07 254,499.85 254,489.54 254,478.67 254,468.1"];
+		sum0;
+		s00 -> sum0	[pos="e,260.08,258.3 260.07,350.14 260.87,325.01 260.96,294.91 260.36,268.57"];
+		sum0 -> s00	[pos="e,247.94,350.18 247.93,258.12 247.13,283.35 247.04,313.55 247.65,339.91"];
+		mux0;
+		sum0 -> mux0:nw	[pos="e,318,90 284.5,149.67 295.45,130.17 306.63,110.26 312.9,99.077"];
+		a00;
+		a00 -> m00	[pos="e,245.1,607.42 213.05,799.67 221.59,748.44 234.39,671.64 243.4,617.58"];
+		b00;
+		b00 -> m00	[pos="e,284.12,599.18 317.9,649.85 308.72,636.09 298.87,621.31 289.72,607.58"];
+	}
+	subgraph cluster_01 {
+		graph [color=black,
+			fontsize=21,
+			label="PE[0][1]"
+		];
+		m01;
+		s01;
+		m01 -> s01	[pos="e,554,458.07 554,499.85 554,489.54 554,478.67 554,468.1"];
+		sum1;
+		s01 -> sum1	[pos="e,560.08,258.3 560.07,350.14 560.87,325.01 560.96,294.91 560.36,268.57"];
+		sum1 -> s01	[pos="e,547.94,350.18 547.93,258.12 547.13,283.35 547.04,313.55 547.65,339.91"];
+		mux1;
+		sum1 -> mux1:nw	[pos="e,618,90 584.5,149.67 595.45,130.17 606.63,110.26 612.9,99.077"];
+		a01;
+		a01 -> m01	[pos="e,545.1,607.42 513.05,799.67 521.59,748.44 534.39,671.64 543.4,617.58"];
+		b10;
+		b10 -> m01	[pos="e,584.12,599.18 617.9,649.85 608.72,636.09 598.87,621.31 589.72,607.58"];
+	}
+	subgraph cluster_02 {
+		graph [color=black,
+			fontsize=21,
+			label="PE[0][2]"
+		];
+		m02;
+		s02;
+		m02 -> s02	[pos="e,854,458.07 854,499.85 854,489.54 854,478.67 854,468.1"];
+		sum2;
+		s02 -> sum2	[pos="e,860.08,258.3 860.07,350.14 860.87,325.01 860.96,294.91 860.36,268.57"];
+		sum2 -> s02	[pos="e,847.94,350.18 847.93,258.12 847.13,283.35 847.04,313.55 847.65,339.91"];
+		mux2;
+		sum2 -> mux2:nw	[pos="e,918,90 884.5,149.67 895.45,130.17 906.63,110.26 912.9,99.077"];
+		a02;
+		a02 -> m02	[pos="e,845.1,607.42 813.05,799.67 821.59,748.44 834.39,671.64 843.4,617.58"];
+		b20;
+		b20 -> m02	[pos="e,884.12,599.18 917.9,649.85 908.72,636.09 898.87,621.31 889.72,607.58"];
+	}
+	subgraph cluster_03 {
+		graph [color=black,
+			fontsize=21,
+			label="PE[0][3]"
+		];
+		m03;
+		s03;
+		m03 -> s03	[pos="e,1154,458.07 1154,499.85 1154,489.54 1154,478.67 1154,468.1"];
+		sum3;
+		s03 -> sum3	[pos="e,1160.1,258.3 1160.1,350.14 1160.9,325.01 1161,294.91 1160.4,268.57"];
+		sum3 -> s03	[pos="e,1147.9,350.18 1147.9,258.12 1147.1,283.35 1147,313.55 1147.7,339.91"];
+		mux3;
+		sum3 -> mux3:nw	[pos="e,1218,90 1184.5,149.67 1195.4,130.17 1206.6,110.26 1212.9,99.077"];
+		a03;
+		a03 -> m03	[pos="e,1145.1,607.42 1113.1,799.67 1121.6,748.44 1134.4,671.64 1143.4,617.58"];
+		b30;
+		b30 -> m03	[pos="e,1184.1,599.18 1217.9,649.85 1208.7,636.09 1198.9,621.31 1189.7,607.58"];
+	}
+	A0 -> a00	[pos="e,167.74,854 108.15,854 124.24,854 141.73,854 157.3,854"];
+	B0 -> b00	[pos="e,354,758.18 354,949.67 354,898.67 354,822.35 354,768.33"];
+	B1 -> b10	[pos="e,654,758.18 654,949.67 654,898.67 654,822.35 654,768.33"];
+	B2 -> b20	[pos="e,954,758.18 954,949.67 954,898.67 954,822.35 954,768.33"];
+	B3 -> b30	[pos="e,1254,758.18 1254,949.67 1254,898.67 1254,822.35 1254,768.33"];
+	a00 -> a01	[pos="e,467.68,854 240.19,854 294.58,854 397.42,854 457.37,854"];
+	a01 -> a02	[pos="e,767.68,854 540.19,854 594.58,854 697.42,854 757.37,854"];
+	a02 -> a03	[pos="e,1067.7,854 840.19,854 894.58,854 997.42,854 1057.4,854"];
+	mux3 -> D0	[pos="e,1450,54 1290.1,54 1329.1,54 1392.2,54 1439.8,54"];
+}

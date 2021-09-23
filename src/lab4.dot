@@ -1,0 +1,107 @@
+// neato -n -l shapes.ps lab4.dot | gvpr -c -fnbb.g | neato -n -Tps -l shapes.ps > lab4.ps && pstopdf lab4.ps && pdfcrop lab4.pdf && mv lab4-crop.pdf lab4.pdf
+// amazing gvpr patch http://graphviz.996277.n3.nabble.com/node-positioning-using-neato-vs-fdp-td2300.html
+digraph lab4 {
+  rankdir=LR;
+  size="10,3";
+//  splines=ortho
+  edge [minlen=4,penwidth=2.5];
+  {node [width=1.5, height=1.5, shape = diain, orientation=0, style="filled",
+       fillcolor="#8aaef4",penwidth=2.5, fontsize=40,
+       pos="0,-150!",peripheries=0]; A0;}
+  {node [width=1.5, height=1.5, shape = diaintop, orientation=0, style="filled",
+       fillcolor="#8aaef4",penwidth=2.5, fontsize=40,
+       pos="400,0!", peripheries=0]; B0;}
+  {node [width=1.5, height=1.5, shape = diaintop, orientation=0, style="filled",
+       fillcolor="#8aaef4",penwidth=2.5, fontsize=40,
+       pos="800,0!", peripheries=0]; B1;}
+  {node [width=1.5, height=1.5, shape = diaintop, orientation=0, style="filled",
+       fillcolor="#8aaef4",penwidth=2.5, fontsize=40,
+       pos="1200,0!", peripheries=0]; B2;}
+  {node [width=1.5, height=1.5, shape = diaintop, orientation=0, style="filled",
+       fillcolor="#8aaef4",penwidth=2.5, fontsize=40,
+       pos="1600,0!", peripheries=0]; B3;}
+  {node [width=1.5, height=1.5, shape = diaout, style="filled",
+       fillcolor="#8aaef4",penwidth=2.5, fontsize=40,
+       pos="1750,-950!", peripheries=0]; D0;}
+  // stuff for first cluster
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=31,pos="200,-450!",label="*"]; m00;}
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="200,-600!",label="+"]; s00;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="200,-800!"]; sum0;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="150,-150!"]; a00;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="400,-300!"]; b00;}
+  {node [label="", style=filled,fillcolor="#d0f4b3", shape=trapezium, orientation=-90, penwidth=2.5,width=1,height=1.5,fontsize=40,pos="300,-950"]; mux0;}
+  subgraph cluster_00 {
+    a00 -> m00;
+    b00 -> m00;
+    m00 -> s00;
+    s00 -> sum0;
+    sum0 -> s00;
+    sum0 -> mux0:nw;
+		label = "PE[0][0]";
+    fontsize = 21;
+    color=black;
+	}
+  // stuff for second cluster
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="600,-450!",label="*"]; m01;}
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="600,-600!",label="+"]; s01;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="600,-800!"]; sum1;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="550,-150!"]; a01;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="800,-300!"]; b10;}
+  {node [label="", style=filled,fillcolor="#d0f4b3", shape=trapezium, orientation=-90, penwidth=2.5,width=1,height=1.5,fontsize=40,pos="700,-950"]; mux1;}
+  subgraph cluster_01 {
+    a01 -> m01;
+    b10 -> m01;
+    m01 -> s01;
+    s01 -> sum1;
+    sum1 -> s01;
+    sum1 -> mux1:nw;
+		label = "PE[0][1]";
+    fontsize = 21;
+    color=black
+  }
+  // stuff for thirdcluster
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="1000,-450!",label="*"]; m02;}
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="1000,-600!",label="+"]; s02;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="1000,-800!"]; sum2;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="950,-150!"]; a02;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="1200,-300!"]; b20;}
+  {node [label="", style=filled,fillcolor="#d0f4b3", shape=trapezium, orientation=-90, penwidth=2.5,width=1,height=1.5,fontsize=40,pos="1100,-950"]; mux2;}
+  subgraph cluster_02 {
+    a02 -> m02;
+    b20 -> m02;
+    m02 -> s02;
+    sum2 -> s02;
+    s02 -> sum2;
+    sum2 -> mux2:nw;
+		label = "PE[0][2]";
+    fontsize = 21;
+    color=black
+  }
+  // stuff for thirdcluster
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="1400,-450!",label="*"]; m03;}
+  {node [fixedsize=true, width=1.5, height=1.5, shape = ellipse, style="filled", fillcolor="#f9bbb9", fontsize=35,pos="1400,-600!",label="+"]; s03;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="1400,-800!"]; sum3;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="1350,-150!"]; a03;}
+  {node [style=filled,fillcolor="#cccccc",shape=dff,width=1,height=1.5,fontsize=40,pos="1600,-300!"]; b30;}
+  {node [label="", style=filled,fillcolor="#d0f4b3", shape=trapezium, orientation=-90, penwidth=2.5,width=1,height=1.5,fontsize=40,pos="1500,-950"]; mux3;}
+  subgraph cluster_03 {
+    a03 -> m03;
+    b30 -> m03;
+    m03 -> s03;
+    s03 -> sum3;
+    sum3 -> s03;
+    sum3 -> mux3:nw;
+		label = "PE[0][3]";
+    fontsize = 21;
+    color=black
+  }
+  A0 -> a00;
+  a00 -> a01;
+  a01 -> a02;
+  a02 -> a03;
+  B0 -> b00;
+  B1 -> b10;
+  B2 -> b20;
+  B3 -> b30;
+  {rank=same; rankdir=LR; B0 -> B1 -> B2 -> B3 [style=invis]}
+}

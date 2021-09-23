@@ -1,0 +1,105 @@
+%! Circuit shapes for Graphviz/dot in PostScript output mode
+
+/xdef {exch def} bind def
+
+% dff
+/dff {
+    9 dict begin
+        3 1 roll % put filled flag at end
+        4 ne { stop } if % sanity-check number of sides
+        aload pop
+        /ury xdef /urx xdef
+        /lry xdef /lrx xdef
+        /lly xdef /llx xdef
+        /uly xdef /ulx xdef
+        /c lrx llx sub 4 div def
+        /d lly uly sub 6 div def
+        /yh uly lly sub 4 div def
+        /ytq yh lly add def
+        /ytqa ytq d sub def
+        /ytqb ytq d add def
+        /z llx c add def
+        newpath
+        moveto
+        urx ury lineto
+        lrx lry lineto
+        llx lly lineto
+        ulx uly lineto
+        urx ury lineto
+        llx ytqa moveto
+        z ytq lineto
+        llx ytqb lineto
+        closepath
+        { fill } { stroke } ifelse
+    end
+} bind def
+
+
+% diain
+/diain {
+    9 dict begin
+        3 1 roll % put filled flag at end
+        4 ne { stop } if % sanity-check number of sides
+        aload pop
+        /ury xdef /urx xdef
+        /lry xdef /lrx xdef
+        /lly xdef /llx xdef
+        /uly xdef /ulx xdef
+        /h2 ury lry sub 2 div def
+        newpath
+        exch h2 sub exch moveto
+        urx ury h2 sub lineto
+        lrx h2 sub lry lineto
+        llx lly lineto
+        ulx uly lineto
+        closepath
+        { fill } { stroke } ifelse
+    end
+} bind def
+
+% diaintop
+/diaintop {
+    9 dict begin
+        3 1 roll % put filled flag at end
+        4 ne { stop } if % sanity-check number of sides
+        aload pop
+        /ury xdef /urx xdef
+        /lry xdef /lrx xdef
+        /lly xdef /llx xdef
+        /uly xdef /ulx xdef
+        /h2 lrx llx sub 2 div def
+        newpath
+        moveto
+        lrx lry h2 add lineto
+        lrx h2 sub lry lineto
+        llx lly h2 add lineto
+        ulx uly lineto
+        urx ury lineto
+        closepath
+        { fill } { stroke } ifelse
+    end
+} bind def
+
+
+% diaout
+/diaout {
+    9 dict begin
+        3 1 roll % put filled flag at end
+        4 ne { stop } if % sanity-check number of sides
+        aload pop
+        /ury xdef /urx xdef
+        /lry xdef /lrx xdef
+        /lly xdef /llx xdef
+        /uly xdef /ulx xdef
+        /h2 ury lry sub 2 div def
+        newpath
+        moveto
+        lrx lry lineto
+        llx h2 add lly lineto
+        ulx ury h2 sub lineto
+        ulx h2 add uly lineto
+        closepath
+        { fill } { stroke } ifelse
+    end
+} bind def
+
